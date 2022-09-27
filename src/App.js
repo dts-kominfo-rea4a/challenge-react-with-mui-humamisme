@@ -29,9 +29,9 @@ const App = () => {
         <Grid xs={12} md={4.9}>
           <ContactForm fnAddContact={addCcntact} />
         </Grid>
-        <Grid xs={12} md={5.6} sx={{ margin: "0 auto" }}>
+        <Grid xs={12} md={5.6} sx={{ margin: "0 auto", backgroundColor: "#DBF6F0", padding: "0.5rem 1rem", borderRadius: "4px" }} component="ul">
           {contacts.map((contact) => {
-            return <Contact contact={contact} />;
+            return <Contact contact={contact} key={contact.phone + "-" + +new Date()} />;
           })}
         </Grid>
       </Grid>
