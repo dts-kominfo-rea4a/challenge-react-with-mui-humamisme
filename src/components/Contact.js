@@ -10,21 +10,19 @@ import Box from "@mui/material/Box";
 
 // Kalian bisa membuat CSS sendiri di src/components/Contact.css
 // atau langsung tambahkan dengan sx={{}}
-const Contact = ({ contact }) => {
-  // Contact berisi foto, nama, telepon, dan email
+const Contact = ({ data }) => {
+  // data berisi foto, nama, telepon, dan email
   return (
-        <ListItem sx={{ borderBottom: "thin solid rgba(0, 0, 0, 0.12)", pl: 0, pr: 0, overflow: "hidden", flexWrap: "wrap" }}>
-          <ListItemAvatar sx={{ margin: { xs: "0 auto 1rem", sm: "0 2.5rem 0 0" } }}>
-            <Avatar alt={contact.name} src={contact.photo} sx={{ width: "5rem", height: "5rem" }} />
-          </ListItemAvatar>
-          <Box sx={{ flex: { xs: "100%", sm: 1 }, textAlign: { xs: "center", sm: "left" } }}>
-            <ListItemText primary={contact.name} />
-            <ListItemText secondary={contact.phone} />
-            <ListItemText secondary={contact.email} />
-          </Box>
-        </ListItem>
-      // </List>
-    // </section>
+    <ListItem sx={{ borderBottom: "thin solid rgba(0, 0, 0, 0.12)", pl: 0, pr: 0, overflow: "hidden", flexWrap: "wrap" }}>
+      <ListItemAvatar sx={{ margin: { xs: "0 auto 1rem", sm: "0 2.5rem 0 0" } }}>
+        <Avatar alt={data.name} src={data.photo} sx={{ width: "5rem", height: "5rem" }} />
+      </ListItemAvatar>
+      <Box sx={{ flex: { xs: "100%", sm: 1 }, textAlign: { xs: "center", sm: "left" } }}>
+        <ListItemText primary={data.name} />
+        <ListItemText secondary={data.phone} />
+        <ListItemText secondary={data.email} />
+      </Box>
+    </ListItem>
   );
 };
 
