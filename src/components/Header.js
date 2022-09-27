@@ -10,7 +10,6 @@ import Divider from "@mui/material/Divider";
 const Header = () => {
   return (
     <header style={{ marginBottom: "5rem" }}>
-    {/* <header> */}
       <Typography component="h1" variant="h3" sx={{margin:"1rem 0"}}>Call a Friend</Typography>
       <Divider>
         <Typography component="h2" variant="subtitle1">Your friendly contact app</Typography>

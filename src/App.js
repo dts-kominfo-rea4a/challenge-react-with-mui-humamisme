@@ -18,17 +18,16 @@ const App = () => {
   // Buatlah handler untuk menambahkan kontak baru yang akan dikirim ke ContactForm
   const [contacts, setContacts] = useState(contactsJSON);
 
+  const addCcntact = (newContact) => {
+    setContacts([...contacts, newContact]);
+  };
+
   return (
     <div className="App">
       <Header />
-      {/* <Grid style={{ margin: "3rem", display: "flex", gap: "3rem" }}>
-        <ContactForm />
-        <Contact contactData={contacts} />
-      </Grid> */}
-      {/* <Grid container spacing={1} sx={{ margin: "3rem" }}> */}
       <Grid container sx={{ margin: "3rem", gap: "3rem" }}>
         <Grid xs={12} md={4.9}>
-          <ContactForm />
+          <ContactForm fnAddContact={addCcntact} />
         </Grid>
         <Grid xs={12} md={5.6} sx={{ margin: "0 auto" }}>
           <Contact contactData={contacts} />
