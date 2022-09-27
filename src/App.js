@@ -30,7 +30,7 @@ const App = () => {
           <ContactForm fnAddContact={addCcntact} />
         </Grid>
         <Grid xs={12} md={5.6} sx={{ margin: "0 auto" }}>
-          <Contact contactData={contacts} />
+          <Contact data={contacts} />
         </Grid>
       </Grid>
     </div>

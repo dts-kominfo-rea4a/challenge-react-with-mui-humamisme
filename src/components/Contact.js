@@ -11,12 +11,12 @@ import { Box } from "@mui/material";
 
 // Kalian bisa membuat CSS sendiri di src/components/Contact.css
 // atau langsung tambahkan dengan sx={{}}
-const Contact = ({ contactData }) => {
+const Contact = ({ data }) => {
   // Contact berisi foto, nama, telepon, dan email
   return (
     <section style={{ backgroundColor: "#DBF6F0", padding: "0 1rem", borderRadius: "4px" }}>
       <List>
-        {contactData.map((contact) => {
+        {data.map((contact) => {
           return (
             <ListItem key={contact.phone + "-" + +new Date()} sx={{ borderBottom: "thin solid rgba(0, 0, 0, 0.12)", pl: 0, pr: 0, overflow: "hidden", flexWrap: "wrap" }}>
               <ListItemAvatar sx={{ margin: { xs: "0 auto 1rem", sm: "0 2.5rem 0 0" } }}>
